@@ -27,7 +27,7 @@ const Hero = () => {
               Make your time worth everything
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-prose">
-              Tempo helps you plan smarter, focus deeper, and finish faster — a
+              Stamp Mind helps you plan smarter, focus deeper, and finish faster — a
               clear rhythm for your day, powered by delightful automation.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
@@ -43,58 +43,32 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-400 animate-float">
-              <div className="relative w-full h-full flex items-center justify-center p-8">
-                <div className="grid grid-cols-3 gap-4 transform rotate-12 scale-90 opacity-90">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transform -rotate-6">
-                    <div className="h-3 bg-white/60 rounded mb-2"></div>
-                    <div className="h-2 bg-white/40 rounded mb-1"></div>
-                    <div className="h-2 bg-white/40 rounded mb-1"></div>
-                    <div className="h-1 bg-white/30 rounded"></div>
-                  </div>
-                  <div className="bg-white/25 backdrop-blur-sm rounded-lg p-4 transform rotate-3">
-                    <div className="h-2 bg-white/50 rounded mb-2"></div>
-                    <div className="flex space-x-1 mb-2">
-                      <div className="h-8 w-2 bg-purple-300/60 rounded"></div>
-                      <div className="h-6 w-2 bg-blue-300/60 rounded"></div>
-                      <div className="h-10 w-2 bg-cyan-300/60 rounded"></div>
-                      <div className="h-4 w-2 bg-purple-300/60 rounded"></div>
+            <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl animate-float bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200/50">
+              <img
+                src="/stamp-mind-dashboard.png"
+                alt="Stamp Mind dashboard showing focus tracking, task management, and productivity analytics"
+                className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  // Fallback if image fails to load
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-400">
+                <div className="text-center text-white p-8">
+                  <div className="text-4xl font-bold mb-4">Stamp Mind</div>
+                  <div className="text-lg opacity-90">Focus • Plan • Track • Achieve</div>
+                  <div className="mt-6 grid grid-cols-2 gap-4 max-w-sm">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <div className="text-2xl font-bold">2h 45m</div>
+                      <div className="text-sm opacity-80">Daily Focus</div>
                     </div>
-                    <div className="h-1 bg-white/30 rounded"></div>
-                  </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-lg p-4 transform -rotate-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mb-2"></div>
-                    <div className="h-2 bg-white/40 rounded mb-1"></div>
-                    <div className="h-1 bg-white/30 rounded"></div>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transform rotate-6">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      <div className="h-2 bg-white/50 rounded flex-1"></div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <div className="text-2xl font-bold">8/12</div>
+                      <div className="text-sm opacity-80">Tasks Done</div>
                     </div>
-                    <div className="h-1 bg-white/30 rounded mb-1"></div>
-                    <div className="h-1 bg-white/30 rounded"></div>
-                  </div>
-                  <div className="bg-white/25 backdrop-blur-sm rounded-lg p-4 transform -rotate-12">
-                    <div className="h-3 bg-white/60 rounded mb-2"></div>
-                    <div className="space-y-1">
-                      <div className="h-1 bg-white/40 rounded"></div>
-                      <div className="h-1 bg-white/30 rounded"></div>
-                      <div className="h-1 bg-white/40 rounded"></div>
-                    </div>
-                  </div>
-                  <div className="bg-white/15 backdrop-blur-sm rounded-lg p-4 transform rotate-9">
-                    <div className="h-2 bg-white/50 rounded mb-3"></div>
-                    <div className="w-full bg-gray-200/30 rounded-full h-1.5 mb-1">
-                      <div className="bg-gradient-to-r from-purple-400 to-cyan-400 h-1.5 rounded-full" style={{width: '70%'}}></div>
-                    </div>
-                    <div className="h-1 bg-white/30 rounded"></div>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent"></div>
-                <div className="absolute top-4 left-4 w-2 h-2 bg-white/60 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-8 right-6 w-1 h-1 bg-cyan-300/80 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                <div className="absolute top-8 right-8 w-1.5 h-1.5 bg-purple-300/70 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
               </div>
             </div>
           </div>

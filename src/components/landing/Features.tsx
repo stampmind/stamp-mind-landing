@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: CheckCircle2,
-    title: "Focus without noise",
+    title: "Plan with ease",
     desc: "A deep focused mode with pomodoro timers and distraction blocking.",
   },
   {
